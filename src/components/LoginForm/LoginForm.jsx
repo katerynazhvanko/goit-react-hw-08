@@ -19,14 +19,10 @@ export default function LoginForm() {
       onSubmit={handleSubmit}
     >
       <Form>
-        <label htmlFor="email">
-          Email
-          <Field type="email" name="email" />
-        </label>
-        <label htmlFor="password">
-          Email
-          <Field type="password" name="password" />
-        </label>
+        <label>Email</label>
+        <Field type="email" name="email" />
+        <label>Password</label>
+        <Field type="password" name="password" />
         <button type="submit">Log In</button>
       </Form>
     </Formik>

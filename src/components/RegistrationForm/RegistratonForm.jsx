@@ -25,18 +25,14 @@ export default function RegistrationForm() {
       <Form>
         <label htmlFor="name" autoComplete="off">
           UserName
-          <Field type="text" name="name" />
         </label>
+        <Field type="text" name="name" />
 
-        <label htmlFor="email">
-          Email
-          <Field type="email" name="email" />
-        </label>
+        <label htmlFor="email">Email</label>
+        <Field type="email" name="email" />
 
-        <label htmlFor="password">
-          Password
-          <Field type="password" name="password" />
-        </label>
+        <label htmlFor="password">Password</label>
+        <Field type="password" name="password" />
         <button type="submit">Sing Up</button>
       </Form>
     </Formik>
