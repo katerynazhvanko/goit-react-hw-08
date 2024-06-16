@@ -6,8 +6,8 @@ import toast from "react-hot-toast";
 // import "yup-phone-lite";
 
 import css from "./ContactForm.module.css";
-import { addContact } from "../../redux/contactsOps";
-import { selectContacts } from "../../redux/contactsSlice";
+import { addContact } from "../../redux/contacts/operations";
+import { selectContacts } from "../../redux/contacts/selectors";
 
 const ContactShema = Yup.object().shape({
   name: Yup.string()

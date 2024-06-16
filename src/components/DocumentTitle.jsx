@@ -1,9 +1,9 @@
 // import {Helmet}
 
-// export default function DocumentTitle({ children }) {
-//     return (
-//         <Helmet>
-//             <title>{children}</title>
-//         </Helmet>
-//     );
-// }
+export default function DocumentTitle({ children }) {
+  return (
+    <div>
+      <title>{children}</title>
+    </div>
+  );
+}

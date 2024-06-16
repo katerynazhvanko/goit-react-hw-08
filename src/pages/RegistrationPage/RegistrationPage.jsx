@@ -1,5 +1,5 @@
 import DocumentTitle from "../../components/DocumentTitle";
-import { RegistrationForm } from "../../components/RegistrationForm/RegistratonForm";
+import RegistrationForm from "../../components/RegistrationForm/RegistrationForm";
 
 export default function RegistrationPage() {
   return (
