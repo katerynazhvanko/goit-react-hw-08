@@ -1,0 +1,19 @@
+.nav {
+  display: flex;
+  gap: 15px;
+  margin-right: auto;
+}
+.link {
+  color: #acacac;
+  padding: 8px 15px;
+  font-size: 22px;
+  font-weight: 500;
+  transition: all ease-in-out 0.2s;
+}
+
+.active {
+  color: white;
+
+  border-radius: 5px;
+  background-color: #007ba7;
+}

@@ -1,19 +1,22 @@
-// import { useSelector } from "react-redux";
+import { useSelector } from "react-redux";
+// import { Toaster } from "react-hot-toast";
+import { selectIsLoggedIn } from "../../redux/auth/selectors";
 
 import Navigation from "../Navigation/Navigation";
 import UserMenu from "../UserMenu/UserMenu";
 import AuthNav from "../AuthNav/AuthNav";
-
-// import { selectIsLoggedIn } from "../../redux/auth/selectors";
+import css from "./AppBar.module.css";
 
 export default function AppBar() {
-  // const { isLoggenIn } = useSelector(selectIsLoggedIn);
+  const isLoggedIn = useSelector(selectIsLoggedIn);
   return (
-    <header>
+    <header className={css.header}>
       <Navigation />
-      <UserMenu />
-      <AuthNav />
-      {/* {isLoggenIn ? <UserMenu /> : <AuthNav />} */}
+      {isLoggedIn ? <UserMenu /> : <AuthNav />}
     </header>
   );
+}
+
+{
+  /* <Toaster position="top-center" />; */
 }

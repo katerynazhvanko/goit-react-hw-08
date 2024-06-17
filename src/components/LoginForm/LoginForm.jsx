@@ -1,14 +1,18 @@
 import { Field, Form, Formik } from "formik";
-// import { useDispatch } from "react-redux";
-// import { logIn } from "../../redux/auth/operations";
+import { useDispatch } from "react-redux";
+import toast from "react-hot-toast";
+import { login } from "../../redux/auth/operations";
 
 export default function LoginForm() {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-  // const handleSubmit = (values, action) => {
-  //   dispatch(logIn(values));
-  //   action.resetForm();
-  // };
+  const handleSubmit = (values, action) => {
+    dispatch(login(values))
+      .unwrap()
+      .then(() => toast.success("Login is successfull"))
+      .catch(() => toast.error("Wrong password or email. Try again"));
+    action.resetForm();
+  };
 
   return (
     <Formik
@@ -16,7 +20,7 @@ export default function LoginForm() {
         email: "",
         password: "",
       }}
-      // onSubmit={handleSubmit}
+      onSubmit={handleSubmit}
     >
       <Form>
         <label>Email</label>
