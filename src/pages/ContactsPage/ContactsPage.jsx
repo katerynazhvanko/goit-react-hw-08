@@ -22,7 +22,6 @@ export default function ContactsPage() {
 
   return (
     <>
-      <h1>Phonebook</h1>
       {isLoading && <Loader />}
       {isError && <ErrorMessage />}
       <ContactForm />
