@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import css from "./AppDescription.module.css";
 
 export default function AppDescription() {
@@ -35,17 +35,17 @@ export default function AppDescription() {
         the benefits of <b className={css.accent}>ContactBook App</b>.
       </p>
       <p className={css.text}>
-        <Link to="/registration" className={css.link}>
+        <NavLink to="/register" className={css.link}>
           Registration
-        </Link>{" "}
+        </NavLink>{" "}
         takes only a few minutes. Join our community and make managing contacts
         simple and convenient.
       </p>
       <p className={css.text}>
         Already have an account?{" "}
-        <Link to="/login" className={css.link}>
+        <NavLink to="/login" className={css.link}>
           Log in
-        </Link>
+        </NavLink>
       </p>
     </div>
   );

@@ -10,9 +10,7 @@ export default function HomePage() {
       <DocumentTitle>
         Welcome to <span style={greetingsTitle}>ContactBook App</span>
       </DocumentTitle>
-      <div>
-        <AppDescription />
-      </div>
+      <AppDescription />
     </>
   );
 }
